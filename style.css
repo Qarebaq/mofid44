@@ -944,3 +944,137 @@ filter: grayscale(0);
 filter: grayscale(0); 
 }
 
+
+.container .card .pic-khaki{
+  z-index: 100;
+  width: 530px;
+  height: 280px;
+  background-image: url("photos/khaki.jpg");
+  background-size: 100% 100%;
+  filter: grayscale(100%); }
+
+.container .card:hover .pic-khaki {
+filter: grayscale(0); 
+}
+
+
+
+.container .card .pic-hmardi{
+  z-index: 100;
+  width: 530px;
+  height: 280px;
+  background-image: url("photos/hmardi.jpg");
+  background-size: 100% 100%;
+  filter: grayscale(100%); }
+
+.container .card:hover .pic-hmardi {
+filter: grayscale(0); 
+}
+
+
+
+.container .card .pic-farhan{
+  z-index: 100;
+  width: 530px;
+  height: 280px;
+  background-image: url("photos/farhan.jpg");
+  background-size: 100% 100%;
+  filter: grayscale(100%); }
+
+.container .card:hover .pic-farhan {
+filter: grayscale(0); 
+}
+
+
+
+
+.container .card .pic-hashem{
+  z-index: 100;
+  width: 530px;
+  height: 280px;
+  background-image: url("photos/hashem.jpg");
+  background-size: 100% 100%;
+  filter: grayscale(100%); }
+
+.container .card:hover .pic-hashem {
+filter: grayscale(0); 
+}
+
+
+
+
+.container .card .pic-saleh{
+  z-index: 100;
+  width: 530px;
+  height: 280px;
+  background-image: url("photos/saleh.jpg");
+  background-size: 100% 100%;
+  filter: grayscale(100%); }
+
+.container .card:hover .pic-saleh {
+filter: grayscale(0); 
+}
+
+
+
+
+.container .card .pic-parviz{
+  z-index: 100;
+  width: 530px;
+  height: 280px;
+  background-image: url("photos/parviz.jpg");
+  background-size: 100% 100%;
+  filter: grayscale(100%); }
+
+.container .card:hover .pic-parviz {
+filter: grayscale(0); 
+}
+
+
+
+
+
+
+
+.container .card .pic-khalili{
+  z-index: 100;
+  width: 530px;
+  height: 280px;
+  background-image: url("photos/khalili .jpg");
+  background-size: 100% 100%;
+  filter: grayscale(100%); }
+
+.container .card:hover .pic-khalili {
+filter: grayscale(0); 
+}
+
+
+.container .card .pic-alirezae{
+  z-index: 100;
+  width: 530px;
+  height: 280px;
+  background-image: url("photos/alirezae.jpg");
+  background-size: 100% 100%;
+  filter: grayscale(100%); }
+
+.container .card:hover .pic-alirezae {
+filter: grayscale(0); 
+}
+
+
+.container .card .pic-sora{
+  z-index: 100;
+  width: 530px;
+  height: 280px;
+  background-image: url("photos/sora.jpg");
+  background-size: 100% 100%;
+  filter: grayscale(100%); }
+
+.container .card:hover .pic-sora {
+filter: grayscale(0); 
+}
+
+
+
+
+
