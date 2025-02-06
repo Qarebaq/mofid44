@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خاطرات دوره ۴۴</title>
+    <link rel="stylesheet" href="style.css">
+    <!--vazir matn font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jomhuria&family=Lalezar&family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+
+
+
+
+    <style>
+
+body {
+
+                font-family: 'Vazirmatn';
+            background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2, h3 {
+            color: #0056b3;
+            font-weight: bold;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        button {
+            background: linear-gradient(90deg, #007bff, #0056b3);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #0056b3, #003f7f);
+        }
+
+        .memory-item {
+            background: #f9f9f9;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-left: 4px solid #007bff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .memory-item button {
+            width: auto;
+            margin-left: 10px;
+            padding: 8px 12px;
+            font-size: 14px;
+        }
+
+        footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+footer a {
+  color: #4caf50;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.copyright {
+  font-size: 14px;
+}
+
+
+.navbar1{
+ 
+ margin-left: auto;
+ margin-right: auto;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  border: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10rem;
+  transition: all 0.02s;
+  font-weight: bold;
+  cursor: pointer;
+  color: rgb(37, 37, 37);
+  z-index: 0;
+  box-shadow: 0 0px 7px -5px rgba(0, 0, 0, 0.5);
+}
+
+.button:hover {
+  background: rgb(193, 228, 248);
+  color: rgb(33, 0, 85);
+}
+
+.button:active {
+  transform: scale(0.97);
+}
+
+.hoverEffect {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.hoverEffect div {
+  background: rgb(222, 0, 75);
+  background: linear-gradient(
+    90deg,
+    rgba(222, 0, 75, 1) 0%,
+    rgba(191, 70, 255, 1) 49%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  border-radius: 40rem;
+  width: 10rem;
+  height: 10rem;
+  transition: 0.4s;
+  filter: blur(20px);
+  animation: effect infinite 3s linear;
+  opacity: 0.5;
+}
+
+.button:hover .hoverEffect div {
+  width: 8rem;
+  height: 8rem;
+}
+
+@keyframes effect {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+#scrollToTop {
+  display: none; /* Initially hidden */
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: center;
+  line-height: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#scrollToTop:hover {
+  background-color: #45a049;
+}
+
+
+
+.parallax {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.800), rgba(0, 0, 0, 0.450)), 
+  url('photos/bg.jpg');  height: 100vh; /* ارتفاع بخش به اندازه صفحه نمایش */
+  background-attachment: fixed; /* کلید اصلی برای افکت پارالاکس */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* انیمیشن فلش اسکرول */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite; /* انیمیشن پرش فلش */
+  cursor: pointer;
+}
+
+.arrow {
+  width: 50px;
+  height: 50px;
+  border-left: 5px solid white;
+  border-bottom: 5px solid white;
+  transform: rotate(45deg); /* چرخش فلش */
+  animation: arrow-bounce 1.5s infinite; /* انیمیشن چرخشی */
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6); /* سایه نرم */
+  transition: all 0.3s ease; /* تغییرات نرم هنگام هاور */
+}
+
+/* انیمیشن چرخش و پرش فلش */
+@keyframes bounce {
+  0% {
+    transform: translateX(-50%) translateY(0) rotate(45deg);
+  }
+  50% {
+    transform: translateX(-50%) translateY(10px) rotate(45deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0) rotate(45deg);
+  }
+}
+
+@keyframes arrow-bounce {
+  0% {
+    transform: rotate(45deg) translateY(0);
+  }
+  50% {
+    transform: rotate(45deg) translateY(-10px);
+  }
+  100% {
+    transform: rotate(45deg) translateY(0);
+  }
+}
+
+/* هاور کردن فلش */
+.scroll-indicator:hover .arrow {
+  transform: rotate(45deg) translateY(-15px); /* حرکت بیشتر در هاور */
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.9); /* سایه بیشتر در هاور */
+  border-color: #ff6347; /* تغییر رنگ در هاور */
+}
+
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+footer a {
+  color: #4caf50;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.copyright {
+  font-size: 14px;
+}
+
+
+.circle {
+
+  width: 70px;
+  height: 70px;
+  background: rgb(63,94,251);
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  transition: 0.4s;
+}
+.circle:hover{
+  width: 85px;
+  height: 85px;
+  transition: 0.4s;
+}
+/* استایل باکس */
+.box {
+
+  display: none;
+  width: 320px;
+  background-color: #fff;
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  border: 2px solid #4CAF50;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+/* تنظیمات iframe */
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-links{
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 20px 15px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.nav-links li{
+  list-style: none;
+  margin: 0 12px;
+}
+.nav-links li a{
+  position: relative;
+  color: #333;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 6px 0;
+  text-decoration: none;
+}
+.nav-links li a:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: #34efdf;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+}
+.nav-links li a:hover:before{
+  width: 100%;
+}
+.nav-links li.center a:before{
+  left: 50%;
+  transform: translateX(-50%);
+}
+.nav-links li.upward a:before{
+  width: 100%;
+  bottom: -5px;
+  opacity: 0;
+}
+.nav-links li.upward a:hover:before{
+  bottom: 0px;
+  opacity: 1;
+}
+.nav-links li.forward a:before{
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+}
+.nav-links li.forward a:hover:before{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+
+
+
+p{
+  margin: 5px;
+  font-family: "Vazirmatn";
+}
+h1{
+  margin: 5px;
+}
+h2{
+  margin: 5px;
+}
+h3{
+  margin: 5px;
+}
+h4{
+  margin: 5px;
+}
+h5{
+  margin: 5px;
+}
+
+button{
+    font-family: "Vazirmatn";
+}
+textarea{
+    font-family: "Vazirmatn";
+}
+
+    </style>
+</head>
+<body>
+
+
+
+    <br><br> 
+
+
+<div dir="rtl" class="navbar1" style="width: 90%;">
+<ul class="nav-links">
+  <li><a href="mofid.html">
+    
+<img style="width: 140px;" src="{{ url_for('static', filename='images/LOGO.png') }}" alt="Logo" />
+
+  </a></li>
+  <li class="center"><a href="#">راهنما</a></li>
+  <li class="upward"><a href="#">حمایت</a></li>
+  <!-- <li class="forward"><a href="#">گزارش مشکل </a></li> -->
+  <a href="#">
+  
+    
+<div style="min-width: 150px;">
+    <button class="button" style="color: white;">
+      یه خاطره بنویس!
+      <div class="hoverEffect">
+        <div></div>
+      </div>
+    </button>
+    </div>
+  
+  
+  
+  </a>
+</ul>
+
+</div>
+<br>
+<br>
+
+
+
+    <div class="container">
+        <h2>دفترچه خاطرات دوره ۴۴</h2>
+        <div id="login-section" style="display: block;">
+            <h3>ورود</h3>
+            <input type="text" id="username" placeholder="همون یوزرنیمی که برات فرستادم" required>
+            <input type="password" id="password" placeholder="همون پسوردی که برات فرستادم" required>
+            <button onclick="login()">ورود کن</button>
+        </div>
+
+        <div id="memory-list-section">
+            <h3>خاطراتت اینجاست👇👇</h3>
+            <ul id="memory-list"></ul>
+            <button onclick="toggleAllMemories()">تغییر وضعیت خاطرات</button>
+        </div>
+
+        <div id="memory-section" style="display: none;">
+            <h3>یه خاطره جدید بنویس!</h3>
+            <textarea id="memory" placeholder="یه چیز خاطره انگیز بگو..."></textarea>
+            <button onclick="addMemory()">خاطره بنویس!</button>
+        </div>
+    </div>
+
+    <!-- <footer>
+        <p>&copy; 2025 Online Diary | Keep your memories safe.</p>
+    </footer> -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">خانه</a>
+            <a href="#">حمایت</a>
+            <a href="#">راهنما</a>
+            <a href="index.html">یه خاطره بنویس</a>
+        </div>
+        <div class="copyright">
+            &copy; 2025 صادقانش کدوم کپی رایت؟ اینو همینطوری گذاشتم اینجا.
+        </div>
+      </footer>
+      
+    <script>
+        let currentUser = null;
+        let currentRole = 'user';
+        let memories = [];
+        let showAll = false;
+
+        window.onload = function () {
+            fetchMemories();
+        };
+
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, password }),
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    if (data.message === 'Login successful') {
+                        currentUser = username;
+                        currentRole = data.role || 'user';
+                        document.getElementById('login-section').style.display = 'none';
+                        document.getElementById('memory-section').style.display = 'block';
+                        fetchMemories();
+                    } else {
+                        alert('Invalid username or password');
+                    }
+                });
+        }
+
+        function addMemory() {
+            const memory = document.getElementById('memory').value;
+
+            fetch('/add-memory', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username: currentUser, memory }),
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    if (data.message === 'Memory added successfully') {
+                        document.getElementById('memory').value = '';
+                        fetchMemories();
+                    } else {
+                        alert('Failed to add memory');
+                    }
+                });
+        }
+
+        function fetchMemories() {
+            fetch('/get-memories')
+                .then((response) => response.json())
+                .then((data) => {
+                    const memoryList = document.getElementById('memory-list');
+                    memoryList.innerHTML = '';
+
+                    memories = data.memories;
+                    const memoriesToShow = showAll ? memories : memories.slice(-3);
+
+                    memoriesToShow.forEach((memory) => {
+                        const li = document.createElement('li');
+                        li.classList.add('memory-item');
+                        li.innerHTML = `${memory.username}: ${memory.memory}`;
+
+                        if (memory.username === currentUser || currentRole === 'admin') {
+                            const editButton = document.createElement('button');
+                            editButton.textContent = 'Edit';
+                            editButton.onclick = () => editMemory(memory.id);
+                            li.appendChild(editButton);
+
+                            const deleteButton = document.createElement('button');
+                            deleteButton.textContent = 'Delete';
+                            deleteButton.onclick = () => deleteMemory(memory.id);
+                            li.appendChild(deleteButton);
+                        }
+
+                        memoryList.appendChild(li);
+                    });
+                });
+        }
+
+        function toggleAllMemories() {
+            showAll = !showAll;
+            fetchMemories();
+        }
+
+        function editMemory(memoryId) {
+            const newMemory = prompt('Edit your memory:');
+            if (newMemory) {
+                fetch('/edit-memory', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ memoryId, newMemory, username: currentUser }),
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        if (data.message === 'Memory updated successfully') {
+                            fetchMemories();
+                        } else {
+                            alert('Failed to edit memory');
+                        }
+                    });
+            }
+        }
+
+        function deleteMemory(memoryId) {
+            fetch('/delete-memory', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ memoryId, username: currentUser }),
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    if (data.message === 'Memory deleted successfully') {
+                        fetchMemories();
+                    } else {
+                        alert('Failed to delete memory');
+                    }
+                });
+        }
+    </script>
+</body>
+</html>

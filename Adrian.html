@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jomhuria&family=Lalezar&family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+
+
+    <title>آدرین تجلی </title>
+</head>
+<body>
+    <style>
+body{
+    font-family: "Vazirmatn";
+}
+.navbar1{
+ 
+ margin-left: auto;
+ margin-right: auto;
+}
+
+
+body {
+font-family: 'Vazirmatn';
+background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+margin: 0;
+padding: 0;
+color: #333;
+}
+
+.container {
+max-width: 600px;
+margin: 50px auto;
+padding: 20px;
+background: #ffffff;
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+h2, h3 {
+color: #0056b3;
+font-weight: bold;
+}
+
+input, textarea, button {
+width: 100%;
+padding: 12px;
+margin: 10px 0;
+border: 1px solid #ddd;
+border-radius: 5px;
+box-sizing: border-box;
+font-size: 16px;
+}
+
+
+.memory-item {
+background: #f9f9f9;
+margin-bottom: 15px;
+padding: 15px;
+border-left: 4px solid #007bff;
+border-radius: 5px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.memory-item button {
+width: auto;
+margin-left: 10px;
+padding: 8px 12px;
+font-size: 14px;
+}
+
+footer {
+background-color: #333;
+color: #fff;
+text-align: center;
+padding: 20px 10px;
+}
+
+footer a {
+color: #4caf50;
+text-decoration: none;
+margin: 0 10px;
+}
+
+footer a:hover {
+text-decoration: underline;
+}
+
+.footer-links {
+margin-bottom: 10px;
+}
+
+.copyright {
+font-size: 14px;
+}
+
+
+.navbar1{
+
+margin-left: auto;
+margin-right: auto;
+}
+.button {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+padding: 15px 30px;
+border: 0;
+position: relative;
+overflow: hidden;
+border-radius: 10rem;
+transition: all 0.02s;
+font-weight: bold;
+cursor: pointer;
+color: rgb(37, 37, 37);
+z-index: 0;
+box-shadow: 0 0px 7px -5px rgba(0, 0, 0, 0.5);
+}
+
+.button:hover {
+background: rgb(193, 228, 248);
+color: rgb(33, 0, 85);
+}
+
+.button:active {
+transform: scale(0.97);
+}
+
+.hoverEffect {
+position: absolute;
+bottom: 0;
+top: 0;
+left: 0;
+right: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 1;
+}
+
+.hoverEffect div {
+background: rgb(222, 0, 75);
+background: linear-gradient(
+90deg,
+rgba(222, 0, 75, 1) 0%,
+rgba(191, 70, 255, 1) 49%,
+rgba(0, 212, 255, 1) 100%
+);
+border-radius: 40rem;
+width: 10rem;
+height: 10rem;
+transition: 0.4s;
+filter: blur(20px);
+animation: effect infinite 3s linear;
+opacity: 0.5;
+}
+
+.button:hover .hoverEffect div {
+width: 8rem;
+height: 8rem;
+}
+
+@keyframes effect {
+0% {
+transform: rotate(0deg);
+}
+
+100% {
+transform: rotate(360deg);
+}
+}
+
+
+
+
+
+#scrollToTop {
+display: none; /* Initially hidden */
+position: fixed;
+bottom: 20px;
+left: 20px;
+background-color: #4caf50;
+color: white;
+border: none;
+border-radius: 50%;
+width: 50px;
+height: 50px;
+cursor: pointer;
+font-size: 18px;
+text-align: center;
+line-height: 50px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#scrollToTop:hover {
+background-color: #45a049;
+}
+
+
+
+.parallax {
+background-image: linear-gradient(rgba(0, 0, 0, 0.800), rgba(0, 0, 0, 0.450)), 
+url('photos/bg.jpg');  height: 100vh; /* ارتفاع بخش به اندازه صفحه نمایش */
+background-attachment: fixed; /* کلید اصلی برای افکت پارالاکس */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+/* انیمیشن فلش اسکرول */
+.scroll-indicator {
+position: absolute;
+bottom: 30px;
+left: 50%;
+transform: translateX(-50%);
+animation: bounce 2s infinite; /* انیمیشن پرش فلش */
+cursor: pointer;
+}
+
+.arrow {
+width: 50px;
+height: 50px;
+border-left: 5px solid white;
+border-bottom: 5px solid white;
+transform: rotate(45deg); /* چرخش فلش */
+animation: arrow-bounce 1.5s infinite; /* انیمیشن چرخشی */
+border-radius: 50%;
+box-shadow: 0 0 20px rgba(255, 255, 255, 0.6); /* سایه نرم */
+transition: all 0.3s ease; /* تغییرات نرم هنگام هاور */
+}
+
+/* انیمیشن چرخش و پرش فلش */
+@keyframes bounce {
+0% {
+transform: translateX(-50%) translateY(0) rotate(45deg);
+}
+50% {
+transform: translateX(-50%) translateY(10px) rotate(45deg);
+}
+100% {
+transform: translateX(-50%) translateY(0) rotate(45deg);
+}
+}
+
+@keyframes arrow-bounce {
+0% {
+transform: rotate(45deg) translateY(0);
+}
+50% {
+transform: rotate(45deg) translateY(-10px);
+}
+100% {
+transform: rotate(45deg) translateY(0);
+}
+}
+
+/* هاور کردن فلش */
+.scroll-indicator:hover .arrow {
+transform: rotate(45deg) translateY(-15px); /* حرکت بیشتر در هاور */
+box-shadow: 0 0 30px rgba(255, 255, 255, 0.9); /* سایه بیشتر در هاور */
+border-color: #ff6347; /* تغییر رنگ در هاور */
+}
+
+
+footer {
+background-color: #333;
+color: #fff;
+text-align: center;
+padding: 20px 10px;
+}
+
+footer a {
+color: #4caf50;
+text-decoration: none;
+margin: 0 10px;
+}
+
+footer a:hover {
+text-decoration: underline;
+}
+
+.footer-links {
+margin-bottom: 10px;
+}
+
+.copyright {
+font-size: 14px;
+}
+
+
+/* استایل باکس */
+.box {
+
+display: none;
+width: 320px;
+background-color: #fff;
+position: fixed;
+bottom: 100px;
+right: 20px;
+border: 2px solid #4CAF50;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+z-index: 999;
+}
+
+/* تنظیمات iframe */
+iframe {
+width: 100%;
+height: 100%;
+}
+
+.nav-links{
+display: flex;
+align-items: center;
+background: #fff;
+padding: 20px 15px;
+border-radius: 12px;
+box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.nav-links li{
+list-style: none;
+margin: 0 12px;
+}
+.nav-links li a{
+position: relative;
+color: #333;
+font-size: 20px;
+font-weight: 500;
+padding: 6px 0;
+text-decoration: none;
+}
+.nav-links li a:before{
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+height: 3px;
+width: 0%;
+background: #34efdf;
+border-radius: 12px;
+transition: all 0.4s ease;
+}
+.nav-links li a:hover:before{
+width: 100%;
+}
+.nav-links li.center a:before{
+left: 50%;
+transform: translateX(-50%);
+}
+.nav-links li.upward a:before{
+width: 100%;
+bottom: -5px;
+opacity: 0;
+}
+.nav-links li.upward a:hover:before{
+bottom: 0px;
+opacity: 1;
+}
+.nav-links li.forward a:before{
+width: 100%;
+transform: scaleX(0);
+transform-origin: right;
+transition: transform 0.4s ease;
+}
+.nav-links li.forward a:hover:before{
+transform: scaleX(1);
+transform-origin: left;
+}
+
+
+
+
+p{
+margin: 5px;
+font-family: "Vazirmatn";
+}
+h1{
+margin: 5px;
+}
+h2{
+margin: 5px;
+}
+h3{
+margin: 5px;
+}
+h4{
+margin: 5px;
+}
+h5{
+margin: 5px;
+}
+
+button{
+font-family: "Vazirmatn";
+}
+textarea{
+font-family: "Vazirmatn";
+}
+
+
+    </style>
+
+<br><br> 
+<div dir="rtl" class="navbar1" style="width: 90%;">
+    <ul class="nav-links">
+      <li><a href="index.html">
+        
+    <img style="width: 140px;" src="photos/LOGO.png" />
+    
+      </a></li>
+      <li class="center"><a href="#">راهنما</a></li>
+      <li class="upward"><a href="#">حمایت</a></li>
+      <!-- <li class="forward"><a href="#">گزارش مشکل </a></li> -->
+      <a href="#">
+      
+        
+    <div style="min-width: 150px;">
+        <button class="button">
+          یه خاطره بنویس!
+          <div class="hoverEffect">
+            <div></div>
+          </div>
+        </button>
+        </div>
+      
+      
+      
+      </a>
+    </ul>
+    
+    </div>
+    <br>
+    <br>
+    
+<div class="container">
+
+<img src="photos/Adrian.jpg" width="100%" style="border-radius: 11px ;"/>
+
+<br>
+<h2>شهاب پرویزی </h2>
+<p dir="rtl">
+
+بمبه نوکرم
+
+</p>
+<!-- <br>
+<img width="80%" src="photos/Yazdd.jpg"/>
+<br> -->
+
+<table>
+  <th>
+    <td>
+      <h3>  09391581701
+      </h3>
+    </td>
+    <td>
+ 
+      <h3>@adriantajalli</h3>
+    </td>
+  </th>
+</table>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<footer>
+    <div class="footer-links">
+        <a href="#">خانه</a>
+        <a href="#">حمایت</a>
+        <a href="#">راهنما</a>
+        <a href="index.html">یه خاطره بنویس</a>
+    </div>
+    <div class="copyright">
+        &copy; 2025 صادقانش کدوم کپی رایت؟ اینو همینطوری گذاشتم اینجا.
+    </div>
+  </footer>
+  
+
+
+
+</body>
+</html>
