@@ -1918,3 +1918,17 @@ filter: grayscale(0);
 filter: grayscale(0); 
 }
 
+
+.container .card .pic-Mehrad{
+  z-index: 100;
+  width: 530px;
+  height: 280px;
+  background-image: url("photos/Mehrad.jpg");
+  background-size: 100% 100%;
+  filter: grayscale(100%); }
+
+.container .card:hover .pic-Mehrad {
+filter: grayscale(0); 
+}
+
+
